@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: hhy9699aj-java-springboot-gitops
+  description: This is GitOps manifest for hhy9699aj-java-springboot   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: hhy9699aj-java-springboot
+    backstage.io/kubernetes-id: hhy9699aj-java-springboot 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: hhy9699aj-java-springboot   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:hhy9699aj-java-springboot
